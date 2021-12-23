@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Header Menu */
+  .headerMenu .menuItem > a::before {
+    @apply absolute  w-0 -bottom-7;
+    content: "";
+    height: 3px;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  .subMenu {
+    visibility: hidden;
+    transition: all 0.4s;
+    top: calc(100% + 25px);
+  }
+
+  .subMenu {
+    width: 220px;
+  }
+
+  @media (min-width: 1280px) {
+    .subMenu {
+      width: 240px;
+    }
+  }
+  .subMenuChild {
+    transition: all 0.3s;
+  }
+  .subMenu li:hover > .subMenuChild {
+    @apply opacity-100 visible -top-3 left-60;
+  }
+
+  .headerMenu .menuItem:hover > a::before {
+    @apply w-full;
+  }
+
+  .headerMenu .menuItem:hover > .subMenu {
+    visibility: visible;
+    @apply top-full;
+  }
+}
