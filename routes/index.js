@@ -50,27 +50,27 @@ const routes = [
       { id: 5, path: "/", label: "Phones" },
     ],
   },
-  {
-    id: 5,
-    path: "/",
-    label: "User",
-    subMenu: [
-      {
-        id: 1,
-        path: "/",
-        label: "My Account",
-        subMenu: [
-          { id: 1, path: "/", label: "Audio" },
-          { id: 2, path: "/", label: "Power" },
-          { id: 3, path: "/", label: "Fitness" },
-          { id: 4, path: "/", label: "PC" },
-          { id: 5, path: "/", label: "Phones" },
-        ],
-      },
-      { id: 2, path: "/", label: "Logout" },
-      { id: 3, path: "/", label: "Settings" },
-    ],
-  },
+  // {
+  //   id: 5,
+  //   path: "/",
+  //   label: "User",
+  //   subMenu: [
+  //     {
+  //       id: 1,
+  //       path: "/",
+  //       label: "My Account",
+  //       subMenu: [
+  //         { id: 1, path: "/", label: "Audio" },
+  //         { id: 2, path: "/", label: "Power" },
+  //         { id: 3, path: "/", label: "Fitness" },
+  //         { id: 4, path: "/", label: "PC" },
+  //         { id: 5, path: "/", label: "Phones" },
+  //       ],
+  //     },
+  //     { id: 2, path: "/", label: "Logout" },
+  //     { id: 3, path: "/", label: "Settings" },
+  //   ],
+  // },
 ];
 
 export default routes;
