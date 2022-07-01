@@ -1,18 +1,18 @@
-import Link from "@/components/Link";
 import classNames from "classnames";
-import LinkItem from "@/components/LinkItem";
 import { FaChevronDown } from "react-icons/fa";
 import routes from "@/routes/index";
+import Link from "@/components/Link";
+import SubMenu from "@/components/SubMenu";
 
 export default function Navbar({ className }) {
   return (
     <nav className={classNames(`headerMenu flex w-full relative`, className)}>
-      {routes?.map((item) => (
+      {routes?.map((item, i) => (
         <div
           className={`menuItem group cursor-pointer py-7 ${
             item.subMenu ? "relative" : ""
           }`}
-          key={item.id}
+          key={i}
         >
           <Link
             href={item.path}
@@ -26,17 +26,7 @@ export default function Navbar({ className }) {
             )}
           </Link>
 
-          {item?.subMenu && (
-            <div className="subMenu shadow-header bg-zinc-900 absolute start-0 opacity-0 group-hover:opacity-100">
-              <ul className="text-body text-sm py-5">
-                {item.subMenu.map((menu, i) => {
-                  return (
-                    <LinkItem data={menu} hasSubMenu={menu.subMenu} key={i} />
-                  );
-                })}
-              </ul>
-            </div>
-          )}
+          {item?.subMenu && <SubMenu subMenu={item.subMenu} />}
         </div>
       ))}
     </nav>
