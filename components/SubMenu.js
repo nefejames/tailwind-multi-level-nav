@@ -2,7 +2,7 @@ import Link from "@/components/Link";
 
 export default function SubMenu({ subMenu }) {
   return (
-    <div className="subMenu shadow-header bg-zinc-900 absolute start-0 opacity-0 group-hover:opacity-100">
+    <div className="subMenu shadow-header bg-zinc-900">
       <ul className="text-body text-sm py-5">
         {subMenu.map((menu, i) => {
           return (
